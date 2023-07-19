@@ -5,6 +5,8 @@ import AddNumber from "../../components/AddNumber";
 import { useState } from "react";
 import UpdateNumber from "../../components/UpdateNumber";
 import TransactionsList from "../../components/TransactionsList";
+import LogsList from "../../components/Logs";
+import { GetAdminLogs, GetAllLogs, GetDataLogs } from "../../services/api";
 
 const AdminPage = () => {
 const [tabIndex, setTabIndex] = useState(0)
@@ -21,6 +23,9 @@ const handleTabsChange = (index) => {
             <Tab>Add a number</Tab>
             <Tab>Update Number</Tab>
             <Tab>Transactions</Tab>
+            <Tab>Logs</Tab>
+            <Tab>Data Logs</Tab>
+            <Tab>Admin Logs</Tab>
           </TabList>
 
           <TabPanels>
@@ -35,6 +40,15 @@ const handleTabsChange = (index) => {
             </TabPanel>
             <TabPanel>
              <TransactionsList />
+            </TabPanel>
+            <TabPanel>
+             <LogsList fetchFunction={GetAllLogs} title="All Logs"/>
+            </TabPanel>
+            <TabPanel>
+             <LogsList fetchFunction={GetDataLogs} title="Data Logs"/>
+            </TabPanel>
+            <TabPanel>
+             <LogsList fetchFunction={GetAdminLogs} title="Admin Logs"/>
             </TabPanel>
           </TabPanels>
         </Tabs>

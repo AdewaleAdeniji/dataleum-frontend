@@ -78,6 +78,82 @@ export const GetTransactions = async () => {
     };
   }
 };
+export const GetAllLogs = async (key) => {
+  var config = {
+    method: "get",
+    url: `${configs.API_BASE_URL}${key}/logs`,
+    headers: {},
+  };
+  try {
+    const req = await axios(config);
+    return {
+      success: true,
+      ...req.data,
+    };
+  } catch (err) {
+    return {
+      success: false,
+      message: err?.response?.data?.message || "Request failed ",
+    };
+  }
+};
+export const GetNumberLogs = async (key) => {
+  var config = {
+    method: "get",
+    url: `${configs.API_BASE_URL}${key}/logs/number`,
+    headers: {},
+  };
+  try {
+    const req = await axios(config);
+    return {
+      success: true,
+      ...req.data,
+    };
+  } catch (err) {
+    return {
+      success: false,
+      message: err?.response?.data?.message || "Request failed ",
+    };
+  }
+};
+export const GetDataLogs = async (key) => {
+  var config = {
+    method: "get",
+    url: `${configs.API_BASE_URL}${key}/logs/data`,
+    headers: {},
+  };
+  try {
+    const req = await axios(config);
+    return {
+      success: true,
+      ...req.data,
+    };
+  } catch (err) {
+    return {
+      success: false,
+      message: err?.response?.data?.message || "Request failed ",
+    };
+  }
+};
+export const GetAdminLogs = async (key) => {
+  var config = {
+    method: "get",
+    url: `${configs.API_BASE_URL}${key}/logs/manage`,
+    headers: {},
+  };
+  try {
+    const req = await axios(config);
+    return {
+      success: true,
+      ...req.data,
+    };
+  } catch (err) {
+    return {
+      success: false,
+      message: err?.response?.data?.message || "Request failed ",
+    };
+  }
+};
 export const DisableNumber = async (key, number) => {
   var config = {
     method: "get",

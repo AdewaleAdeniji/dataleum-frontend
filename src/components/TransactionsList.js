@@ -46,6 +46,7 @@ import {
           <Thead>
             <Tr>
               <Th>Number</Th>
+              <Th>Username</Th>
               <Th>Amount</Th>
               <Th>Date</Th>
             </Tr>
@@ -55,6 +56,7 @@ import {
               return (
                 <Tr>
                   <Td>{num?.number}</Td>
+                  <Td>{num?.username}</Td>
                   <Td>{num?.dataAmount}</Td>
                   <Td>{moment(num?.createdAt).format("HH:mm - DD/MM/YYYY")}</Td>
                   
