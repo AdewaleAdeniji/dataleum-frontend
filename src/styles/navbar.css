@@ -1,0 +1,111 @@
+.topnav {
+    display: flex;
+    background: #fff;
+    height: 100px;
+    padding: 30px 90px;
+    justify-content: space-between;
+}
+.nav-links ul {
+    display: flex;
+}
+
+.nav-links ul li {
+    margin-left: 40px;
+}
+
+.nav-links ul li a {
+    font-family: Lexend Deca;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+/* identical to box height */
+
+
+/* Black-100 */
+    color: #000000;
+}
+a.act-button {
+    color: #fff !important;
+}
+.nav-links ul li a.active {
+    color: #2156DA;
+}
+
+.act-button {
+    width: 130px;
+    height: 50px;
+    background: #2789E3;
+    padding: 10px;
+    font-size: 16px !important;
+}
+.nav-mobile {
+    background: #fff;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.nav-mobile img {
+    height: 30px;
+    width: auto;
+}
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #2156DA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav-content {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-content ul li {
+    margin-bottom: 50px;
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+/* identical to box height */
+
+
+/* Black-100 */
+    color: #fff;
+    text-align: center;
+}
+button.closenav {
+    position: absolute;
+    top: 3%;
+    color: #fff;
+    right: 5%;
+}
+img.nav-logo-float {
+    position: absolute;
+    bottom: 5%;
+}
+.mobile {
+    display: none;
+}
+@media (max-width: 900px) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+        display: flex;
+    }
+    .act-button {
+        width: 200px;
+    }
+  }

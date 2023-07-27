@@ -1,0 +1,183 @@
+.experts .teach-head h6 {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 26px;
+
+  /* Ascent */
+  color: #111d4a;
+  margin-bottom: 0px;
+  margin-top: 42px;
+}
+.experts {
+  padding: 75px 90px;
+  margin-top: 50px;
+}
+.experts-list {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+.expert-two {
+    margin-top: -20px;
+  width: 621px;
+  height: 300px;
+  background: #ffffff;
+  box-shadow: 2px 4px 11px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  margin-left: 44px;
+  display: flex;
+}
+
+.expert-desc {
+  width: 60%;
+  padding: 36px;
+}
+
+.expert-img img {
+  object-fit: cover;
+  height: 324px;
+  margin-top: -24px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.expert-img {
+  border-radius: 7px;
+}
+.expert-desc h6 {
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #575656;
+}
+.expert-desc h5 {
+  margin-top: 5px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.expert-desc p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 25px;
+  color: #575656;
+}
+.expert-desc .expert-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+  /* Brand-main */
+
+  color: #2156da;
+}
+
+.expert-desc button {
+  margin-top: 15px;
+  margin-bottom: 12px;
+  width: 99px;
+  height: 41px;
+  font-weight: 500;
+  font-size: 12px !important;
+  line-height: 15px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.expert-three {
+    width: 275px;
+    height: 300px;
+    background: url('../assets/expert-three.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 44px;
+}
+.expert-names {
+    margin-top: 80%;
+    margin-left: 30px;
+}
+
+.expert-names h6 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+/* identical to box height */
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.expert-names h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+/* identical to box height */
+    color: #FFFFFF;
+    margin-top: 5px;
+}
+.experts-list.mobile {
+    display: none;
+}
+@media(max-width: 1300px) {
+    .experts-list.desk .expert-two {
+        display: none;
+    }
+    .experts-list.mobile {
+        display: flex;
+    }
+    .experts-list.mobile .expert-two {
+        margin-left: 0px;
+    }
+    .expert-img img {
+        height: fit-content;
+        margin-top: 0px;
+        border-radius: 7px !important;
+    }
+}
+@media(max-width: 900px) {
+    .experts {
+        padding: 30px;
+    }
+}
+@media(max-width: 650px) {
+    .expert-two {
+        flex-direction: column;
+        height: fit-content;
+        /* align-items: left; */
+    }
+    .expert-one {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .expert-one img {
+        object-fit: cover;
+        width: 100%;
+    }
+    .experts-list.desk {
+        align-items: center;
+        flex-direction: column;
+    }
+    .expert-three {
+        width: 100%;
+        height: fit-content;
+        margin-top: 15px;
+        margin-left: 0px;
+        padding-bottom: 20px;
+    }
+    .expert-img img {
+        width: 100%;
+        height: fit-content;
+        margin-top: 0px;
+        padding: 10px;
+        border-radius: 0px !important;
+    }
+    .expert-desc {
+        padding: 10px;
+        width: 100%;
+    }
+}

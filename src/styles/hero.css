@@ -1,0 +1,135 @@
+.hero-section {
+  min-height: 700px;
+  padding: 50px;
+  padding-left: 91px;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+}
+.hero-section .hero-side {
+  width: 50%;
+}
+.hero-side h1 {
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 80px;
+
+  /* Brand-main */
+  color: #2156da;
+  width: 40vw;
+}
+
+.hero-side h5 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  /* identical to box height */
+
+  /* Black-50 */
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 35px;
+  font-family: "Lexend Deca";
+}
+
+.subscribe-form-area {
+  margin-top: 104px;
+}
+
+.subscribe-form-area h5 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+form.subscribe-form {
+  margin-top: 20px;
+  height: 80px;
+}
+
+.subscribe-form input {
+  height: 65px;
+  width: 300px;
+  border: 2px solid #2156da;
+  outline: none;
+  margin-right: 17px;
+  background: transparent;
+  padding: 20px;
+}
+
+.subscribe-form button {
+  margin: 5px;
+  margin-left: 0px;
+  height: 65px;
+  width: 150px;
+  background: #2156da;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+.blog .hero-side h5 {
+  width: 80%;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 42px;
+}
+.blog hr {
+  background: #2156da;
+  height: 3px;
+  width: 70%;
+  margin-top: 60px;
+}
+.blog .hero-side h1 {
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 120px;
+}
+@media (max-width: 1200px) {
+  .hero-section {
+    display: block;
+    padding-left: 30px !important;
+    background-color: linear-gradient(
+      216.35deg,
+      rgba(160, 146, 146, 0) 15.56%,
+      rgba(160, 146, 146, 0.024) 31.84%,
+      rgba(160, 146, 146, 0.094) 64.3%,
+      rgba(160, 146, 146, 0.2) 80.97%
+    );
+    height: fit-content;
+  }
+
+  .hero-section .hero-side {
+    width: 100%;
+  }
+
+  .hero-side h1 {
+    width: 100%;
+  }
+
+  .subscribe-form-area {
+    margin-top: 20px;
+  }
+
+  .responsive {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 700px) {
+  .hero-side h1, .blog .hero-side h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .blog .hero-side h5 {
+    width: 100%;
+  }
+  .blog hr {
+    width: 100%;
+  }
+}

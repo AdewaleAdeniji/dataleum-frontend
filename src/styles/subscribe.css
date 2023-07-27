@@ -1,0 +1,68 @@
+.subscribe {
+  margin-top: 60px;
+  height: 364px;
+  background: url("../assets/form-bg.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  text-align: center;
+  padding-top: 40px;
+}
+.subscribe h3 {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 120%;
+  /* identical to box height, or 41px */
+
+  /* Brand-main */
+  color: #2156da;
+}
+
+form.sub-form {
+  margin-top: 70px;
+  display: flex;
+  align-items: unset;
+  justify-content: center;
+}
+form input.email-address::placeholder {
+  color: #2156da;
+}
+form input.email-address {
+  width: 614px;
+  outline: none;
+  background: transparent;
+  border-bottom: 2px solid #2156da;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #2156da;
+}
+
+form button.act-button {
+  margin-left: 50px;
+  width: fit-content;
+}
+@media(max-width: 900px){
+    .subscribe {
+        background: rgba(160, 146, 146, 0.06);;
+    }
+    form input.email-address{
+        width: 50%;
+    }
+    form button.act-button {
+        margin-left: 20px;
+    }
+}
+@media(max-width: 500px) {
+    form {
+        flex-direction: column;
+        align-items: center !important;
+    }
+    form input.email-address{ 
+        width: 80%;   
+        margin-bottom: 20px;
+    }
+    form button.act-button { 
+        margin-left: 0px;
+    }
+}

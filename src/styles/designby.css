@@ -1,0 +1,47 @@
+.design-by h4 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 45px;
+  /* identical to box height */
+
+  /* Ascent */
+  color: #111d4a;
+}
+
+.design-by {
+  padding-top: 75px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.design-by h6 {
+  width: 80%;
+  font-weight:300;
+  font-size: 18px;
+  line-height: 25px;
+  /* or 142% */
+  text-align: center;
+  color: #000000;
+  margin-top: 23px;
+}
+@media (max-width: 500px) {
+  .design-by {
+    padding-top: 45px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .design-by h4 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .design-by h6 {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

@@ -1,0 +1,150 @@
+.driving-us {
+    background: url('../assets/driving-bg.svg');
+    background-size: cover;
+    display: flex;
+    padding: 100px 90px;
+    align-items: center;
+    background-color: rgba(160, 146, 146, 0.09);
+}
+.driving-text {
+    margin-left: 68px;
+}
+
+.driving-text h5 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+/* identical to box height */
+
+
+/* Brand-main */
+    color: #2156DA;
+}
+
+.driving-text h6 {
+    max-width: 600px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 37px;
+/* or 154% */
+
+
+/* Ascent */
+    color: #111D4A;
+    margin-top: 20px;
+}
+
+.text-author {
+    margin-top: 64px;
+    display: flex;
+}
+
+.text-author button {
+    background: #2789E3;
+    padding: 18px;
+    width: 216px;
+    height: 60px;
+}
+
+.text-author div h6 {
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 15px;
+/* identical to box height */
+
+
+/* Brand-main */
+    color: #2156DA;
+}
+
+.text-author div {
+    margin-left: 26px;
+}
+
+.text-author div h4 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+/* identical to box height */
+
+
+/* Brand-main */
+    color: #2156DA;
+}
+.driving-m {
+    display: none;
+}
+@media (max-width: 1100px) {
+
+    .driving-us img {
+        width: 40%;
+    }
+    
+    .driving-us {
+        padding: 50px 40px;
+    }
+}
+@media(max-width: 700px){
+    .driving-us {
+        display: none;
+    }
+    .m-d {
+        display: flex;
+        align-items: center;
+    }
+    
+    .driving-m {
+        display: block;
+        padding: 48px 36px;
+        background-color: rgba(160, 146, 146, 0.09);
+    }
+    
+    .m-d img {
+        width: 162px;
+        height: 164px;
+    }
+    
+    .m-d .driving-text {
+        margin-left: 40px;
+    }
+    
+    .m-d .text-author {
+        margin-top: 0px;
+        flex-direction: column;
+    }
+    
+    .m-d .text-author div {
+        margin-left: 0px;
+        margin-top: 12px;
+    }
+    
+    .m-d .text-author button {
+        width: 143px;
+        height: 40px;
+        font-size: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .m-d .text-author div h4 {
+        font-size: 18px;
+    }
+    .driving-text.m {
+        margin-left: 0px;
+        margin-top: 36px;
+        text-align: center;
+    }
+    
+    .driving-text.m h5 {
+        font-size: 20px;
+    }
+    
+    .driving-text.m h6 {
+        font-size: 14px;
+        line-height: 30px;
+        margin-top: 7px;
+    }
+}
