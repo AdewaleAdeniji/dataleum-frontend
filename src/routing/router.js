@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     element: <AdminPage />,
   },
   {
-    path: "/new/",
+    path: "/website",
     element: <Landing />,
   },
 ]);
