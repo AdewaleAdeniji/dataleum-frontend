@@ -156,6 +156,7 @@ const SetupOTP = () => {
                 <Select
                   placeholder="Select option"
                   value={network}
+                  width={"50%"}
                   onChange={(e) => setNetwork(e.target.value)}
                 >
                   <option value="1">MTN NG</option>
