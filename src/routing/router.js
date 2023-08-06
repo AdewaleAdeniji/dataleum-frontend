@@ -4,14 +4,20 @@ import FormPage from "../pages/customer";
 import OTPPage from "../pages/customer/OtpPage";
 import AdminPage from "../pages/admin";
 import Landing from "../pages/customer/landing";
+import SetupOTP from "../pages/customer/newOTP";
+import NewLandingPage from "../pages/customer/newLanding";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/old-page",
     element: <FormPage />,
   },
   {
     path: ":phone/otp-code",
+    element: <SetupOTP />,
+  },
+  {
+    path: "/old/:phone/otp-code",
     element: <OTPPage />,
   },
   {
@@ -20,6 +26,10 @@ const router = createBrowserRouter([
   },
   {
     path: "/website",
+    element: <NewLandingPage />,
+  },
+  {
+    path: "/",
     element: <Landing />,
   },
 ]);

@@ -20,6 +20,25 @@ export const SendOTP = async (number) => {
     };
   }
 };
+export const GetPhoneNumber = async (number) => {
+  var config = {
+    method: "get",
+    url: `${configs.API_BASE_URL}number/${number}`,
+    headers: {},
+  };
+  try {
+    const req = await axios(config);
+    return {
+      success: true,
+      ...req.data,
+    };
+  } catch (err) {
+    return {
+      success: false,
+      message: err?.response?.data?.message || "Request failed ",
+    };
+  }
+};
 export const AddNumberAPI = async (number, key, username) => {
   var config = {
     method: "get",

@@ -119,7 +119,7 @@ const OTPPage = () => {
               </div>
               <Input
                 type="tel"
-                id="otp"
+                id="phone"
                 value={phoneNumber}
                 placeholder="Phone Number to be credited with data"
                 onChange={(e) => updatePhoneNumber(e.target.value)}

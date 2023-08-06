@@ -49,6 +49,13 @@ form.subscribe-form {
   margin-top: 20px;
   height: 80px;
 }
+.otp-page-container form.subscribe-form {
+  margin-top: 20px;
+  height: fit-content;
+}
+.otp-page .subscribe-form input {
+  width: 100%;
+}
 
 .subscribe-form input {
   height: 65px;

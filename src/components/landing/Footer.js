@@ -3,9 +3,9 @@ import React from "react";
 import Img from "../../assets/Sitting.svg";
 import { CellWifi } from "@mui/icons-material";
 import TwitterLogo from "../../assets/twitter.svg";
-import LinkedinLogo from "../../assets/linkedin.svg";
-import FacebookLogo from "../../assets/facebook.svg";
-import InstagramLogo from "../../assets/instagram.svg";
+// import LinkedinLogo from "../../assets/linkedin.svg";
+// import FacebookLogo from "../../assets/facebook.svg";
+// import InstagramLogo from "../../assets/instagram.svg";
 
 const Footer = () => {
   return (
@@ -30,11 +30,11 @@ const Footer = () => {
             <a>Instructor Guides</a>
           </div> */}
           <div>
-            <h6>Company</h6>
+            {/* <h6>Company</h6>
             <a>About Us</a>
             <a>Our Culture</a>
             <a>FAQs</a>
-            <a>Blog</a>
+            <a>Blog</a> */}
           </div>
         </div>
         <div className="foot-links-two">
@@ -47,33 +47,20 @@ const Footer = () => {
         <div className="img-footer">
           <CellWifi />
         </div>
-        <p>
-        Dataleum - Connecting Hearts, One Byte at a Time.
-        </p>
-        <div className="social-links">
-          <a className="twitter" href="https://twitter.com/agcademy" target="_blank" rel="noopener noreferrer" >
-            <img
-              src={TwitterLogo}
-              alt="Twitter social"
-            />
-          </a>
-          <a className="linkedin">
-            <img
-              src={LinkedinLogo}
-              alt="linkedin social"
-            />
-          </a>
-          <a className="facebook" href="https://www.facebook.com/people/Agcademy/100087007643431/" target="_blank" rel="noopener noreferrer" >
-            <img
-              src={FacebookLogo}
-              alt="facebook social"
-            />
-          </a>
-          <a className="instagram" href="https://instagram.com/agcademy?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer" >
-            <img
-              src={InstagramLogo}
-              alt="instagram social"
-            />
+        <p>Dataleum - Connecting Hearts, One Byte at a Time.</p>
+        <div
+          className="social-links"
+          style={{
+            display: "none",
+          }}
+        >
+          <a
+            className="twitter"
+            href="https://twitter.com/dataleum_app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={TwitterLogo} alt="Twitter social" />
           </a>
         </div>
       </div>

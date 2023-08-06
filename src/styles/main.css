@@ -20,6 +20,9 @@
 body {
   background: #f9fbff;
 }
+.page-container {
+  margin-top: 50px;
+}
 .app-container {
   padding-right: 50px;
   margin-left: 250px;
@@ -297,6 +300,9 @@ h4.page-title {
 .desktop-show {
   display: block;
 }
+.otp-page input {
+  margin-top: 20px;
+}
 /* @font-face {
   font-family: 'Lexend Deca';
   src: local('Lexend Deca'), url(../fonts/Lexend Deca.ttf) format('truetype');
@@ -307,6 +313,10 @@ a {
 .flex-desktop {
   display: flex;
 }
+.subscribe-form-area.otp-page-form {
+  margin-left: 100px;
+  margin-top: 10px;
+}
 @media (max-width: 900px) {
   .mobile-none {
     display: none;
@@ -314,4 +324,15 @@ a {
   .mobile-block {
     display: block !important;
   }
+  .subscribe-form-area.otp-page-form {
+    margin-top:0px;
+    margin-left: 15vw;
+  }
+  .otp-page-container {
+    margin-top: 10px;
+  }
+  .otp-page-container.responsive {
+    height: fit-content;
+  }
+  
 }

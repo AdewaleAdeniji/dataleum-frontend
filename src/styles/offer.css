@@ -21,9 +21,6 @@
 .act-button {
   color: #ffffff;
 }
-.offer {
-  /* margin-top: 35vh; */
-}
 .offer-desc {
   padding-top: 10px;
   width: 100%;
@@ -122,7 +119,7 @@
 }
 @media (max-width: 1400px) {
   .offer {
-    margin-top: 100px;
+    /* margin-top: 100px; */
   }
   .fling-down {
     display: none;
@@ -176,7 +173,7 @@
 
 @media (max-width: 700px) {
   .offer {
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
   .offer-desc h4 {
     font-size: 40px;
@@ -193,7 +190,7 @@
   .offer-description {
     padding: 30px;
     padding-top: 100px;
-    height: 500px;
+    min-height: 500px;
   }
   .offer-cards {
     margin: 5%;

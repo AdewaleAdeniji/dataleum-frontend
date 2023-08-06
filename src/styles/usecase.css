@@ -18,7 +18,7 @@
   color: #2156da !important;
 }
 .text-agcademy-yellow {
-  color:  #2789E3 !important;
+  color: #2789e3 !important;
 }
 
 .usecase-head h6 {
@@ -45,7 +45,7 @@
   color: #111d4a;
 }
 .usecases {
-  height: 700px;
+  min-height: 700px;
   align-items: center;
 }
 
@@ -91,8 +91,8 @@
   margin-bottom: 2px;
 }
 .usecase-card hr {
-  color: #2789E3;
-  background: #2789E3;
+  color: #2789e3;
+  background: #2789e3;
   height: 4px;
   margin-bottom: 15px;
   width: 60px;
@@ -146,6 +146,7 @@
   }
   .usecase-card {
     width: 100%;
+    padding: 25px;
     height: fit-content;
   }
   .usecase-card h4 {
@@ -177,7 +178,10 @@
     width: 50%;
     /* height: 50%; */
     background-repeat: no-repeat;
-}
+  }
+  .hero-side .usecase-card h4 {
+    margin-top: 5px;
+  }
 }
 @media (max-width: 1400px) {
   .usecase-title {
