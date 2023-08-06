@@ -9,8 +9,8 @@ import { convertPhoneToISO, getNetwork } from "../../utils";
 const SetupOTP = () => {
   const { phone } = useParams();
   const toast = useToast();
-  const [phoneNumber, setPhoneNumber] = useState("08107034667");
-  const [otp, setOTP] = useState("010123");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [otp, setOTP] = useState("");
   const [network, setNetwork] = useState("");
   const [loading, setLoading] = useState(false);
   const [details, setDetails] = useState({});
@@ -40,7 +40,7 @@ const SetupOTP = () => {
       });
       setOTP("");
       setPhoneNumber("");
-     getPhoneNumberDetails();
+      getPhoneNumberDetails();
     } else {
       return toast({
         title: sendApi.message || "Error occured",
@@ -119,17 +119,17 @@ const SetupOTP = () => {
                   onChange={(e) => updateOTP(e.target.value)}
                   required
                 />
-
+                <br />
                 <a
                   href="/"
                   style={{
-                    float: "right",
                     fontSize: "12px",
                     marginTop: "5px",
                   }}
                 >
                   Resend OTP
                 </a>
+                <br />
                 <div
                   style={{
                     fontSize: "12px",
@@ -145,6 +145,7 @@ const SetupOTP = () => {
                   onChange={(e) => updatePhoneNumber(e.target.value)}
                   required
                 />
+                <br />
                 <span
                   style={{
                     fontSize: "12px",
