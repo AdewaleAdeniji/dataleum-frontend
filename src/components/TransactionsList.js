@@ -8,11 +8,12 @@ import {
     TableCaption,
     useToast,
     TableContainer,
+    Button,
   } from "@chakra-ui/react";
   import React from "react";
   import { useParams } from "react-router-dom";
   import {
-    GetTransactions,
+    GetTransactions, ReverseTransaction,
   } from "../services/api";
   import moment from "moment";
   
@@ -37,6 +38,22 @@ import {
         });
       }
     };
+    const reverseTransaction = async (transactionID) => {
+      const list = await ReverseTransaction(transactionID);
+      if (list.success) {
+        toast({
+          status: "success",
+          title: "Transaction reversed",
+          isClosable: true
+        })
+      } else {
+        toast({
+          status: "error",
+          title: list.message,
+          isClosable: true,
+        });
+      }
+    }
     console.log(transactions.reverse());
 
     return (
@@ -48,7 +65,9 @@ import {
               <Th>Number</Th>
               <Th>Username</Th>
               <Th>Amount</Th>
+              <Th>Status</Th>
               <Th>Date</Th>
+              <Th></Th>
             </Tr>
           </Thead>
           <Tbody>
@@ -58,8 +77,9 @@ import {
                   <Td>{num?.number}</Td>
                   <Td>{num?.username}</Td>
                   <Td>{num?.dataAmount}</Td>
+                  <Td>{num?.status}</Td>
                   <Td>{moment(num?.createdAt).format("HH:mm - DD/MM/YYYY")}</Td>
-                  
+                  <Td><Button onClick={()=> reverseTransaction(num?.transactionID)}>Reverse Transaction</Button></Td>
                 </Tr>
               );
             })}

@@ -37,7 +37,7 @@ const FormPage = () => {
         status: "success",
         isClosable: true,
       });
-      navigate(`${phoneNumber}/otp-code`);
+      navigate(`${phoneNumber}/${sendApi.numberID}/otp-code`);
     } else {
       return toast({
         title: sendApi.message,

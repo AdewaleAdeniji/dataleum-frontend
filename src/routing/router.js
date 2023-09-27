@@ -13,11 +13,11 @@ const router = createBrowserRouter([
     element: <FormPage />,
   },
   {
-    path: ":phone/otp-code",
+    path: ":phone/:numberID/otp-code",
     element: <SetupOTP />,
   },
   {
-    path: "/old/:phone/otp-code",
+    path: "/old/:phone/:otp-code",
     element: <OTPPage />,
   },
   {

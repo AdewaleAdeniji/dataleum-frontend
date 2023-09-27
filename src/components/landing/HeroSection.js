@@ -38,7 +38,8 @@ const HeroSection = () => {
         status: "success",
         isClosable: true,
       });
-      navigate(`${phoneNumber}/otp-code`);
+      console.log(sendApi)
+      navigate(`${phoneNumber}/${sendApi.numberID}/otp-code`);
     } else {
       return toast({
         title: sendApi.message,

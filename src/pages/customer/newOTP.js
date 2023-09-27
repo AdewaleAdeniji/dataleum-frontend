@@ -3,17 +3,23 @@ import React, { useEffect, useState } from "react";
 import { Fade } from "react-reveal";
 import { useParams } from "react-router-dom";
 import PageContainer from "../../components/layouts/PageContainer";
-import { GetData, GetPhoneNumber } from "../../services/api";
+import {
+  GetData,
+  GetNumberTransactions,
+  GetPhoneNumber,
+} from "../../services/api";
 import { convertPhoneToISO, getNetwork } from "../../utils";
+import moment from "moment";
 
 const SetupOTP = () => {
-  const { phone } = useParams();
+  const { phone, numberID } = useParams();
   const toast = useToast();
   const [phoneNumber, setPhoneNumber] = useState("");
   const [otp, setOTP] = useState("");
   const [network, setNetwork] = useState("");
   const [loading, setLoading] = useState(false);
   const [details, setDetails] = useState({});
+  const [transactions, setTransactions] = useState([]);
   const handleFormSubmit = async () => {
     if (otp.length !== 6) {
       return toast({
@@ -56,6 +62,7 @@ const SetupOTP = () => {
       isClosable: true,
     });
     getPhoneNumberDetails();
+    GetTransactions();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const getPhoneNumberDetails = async () => {
@@ -66,6 +73,18 @@ const SetupOTP = () => {
     } else {
       return toast({
         title: results.message || "Error Occured",
+        status: "error",
+        isClosable: true,
+      });
+    }
+  };
+  const GetTransactions = async () => {
+    const transactions = await GetNumberTransactions(numberID);
+    if (transactions.success) {
+      setTransactions(transactions.transactions);
+    } else {
+      return toast({
+        title: transactions.message || "Error Occured",
         status: "error",
         isClosable: true,
       });
@@ -100,7 +119,6 @@ const SetupOTP = () => {
               <h4>Profile</h4>
               <hr></hr>
               <h6>Name: {details?.username}</h6>
-              <h6>Weekly Quota left: {details?.allowedTimes}</h6>
               <h6>Weekly Quota left: {details?.allowedTimes}</h6>
               <h6>Last Bought: {details?.lastBought}</h6>
             </div>
@@ -176,6 +194,32 @@ const SetupOTP = () => {
                   {loading ? "Loading...." : "Proceed"}
                 </Button>
               </form>
+            </div>
+          </div>
+        </Fade>
+      </div>
+      <div className="hero-section">
+        <Fade left bounce wobble>
+          <div className="hero-side">
+            <div
+              className="usecase-card"
+              style={{
+                width: "100%",
+                minHeight: "fit-content",
+              }}
+            >
+              <h4>Latest Transactions</h4>
+              <hr></hr>
+              {
+                transactions.reverse().slice(0,6).map((transaction) => {
+                  return (
+                    <h6 key={transaction?.transactionID}>{transaction.dataAmount}: {transaction?.status} - {moment(transaction?.createdAt).format("DD/MM/YYYY")}</h6>
+                  )
+                })
+              }
+              <br/>
+              ..... {transactions.length - 6 } more truncated
+            
             </div>
           </div>
         </Fade>
