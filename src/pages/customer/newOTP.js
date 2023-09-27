@@ -218,7 +218,7 @@ const SetupOTP = () => {
                 })
               }
               <br/>
-              ..... {transactions.length - 6 } more truncated
+            
             
             </div>
           </div>
