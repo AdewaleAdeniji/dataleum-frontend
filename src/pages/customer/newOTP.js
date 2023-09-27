@@ -120,7 +120,6 @@ const SetupOTP = () => {
               <hr></hr>
               <h6>Name: {details?.username}</h6>
               <h6>Weekly Quota left: {details?.allowedTimes}</h6>
-              <h6>Last Bought: {details?.lastBought}</h6>
             </div>
           </div>
         </Fade>
