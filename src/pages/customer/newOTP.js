@@ -210,7 +210,7 @@ const SetupOTP = () => {
               <h4>Latest Transactions</h4>
               <hr></hr>
               {
-                transactions.reverse().slice(0,6).map((transaction) => {
+                transactions.splice(-6).reverse().map((transaction) => {
                   return (
                     <h6 key={transaction?.transactionID}>{transaction.dataAmount}: {transaction?.status} - {moment(transaction?.createdAt).format("DD/MM/YYYY")}</h6>
                   )
