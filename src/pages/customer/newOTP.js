@@ -218,7 +218,7 @@ const SetupOTP = () => {
                 })
               }
               <br/>
-            
+              Showing {transactions.reverse().slice(0,6).length} of {transactions.length}
             
             </div>
           </div>
